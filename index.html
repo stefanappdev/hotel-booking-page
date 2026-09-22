@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <link href="./styles/output.css" rel="stylesheet">
 
   <title>Frontend Mentor | Hotel booking confirmation page</title>
 
@@ -16,6 +17,7 @@
 </head>
 <body>
 
+<div class="dropdown-menu sidebar">
   <!-- Sidebar starts -->
 
   Maison Soleil
@@ -38,64 +40,93 @@
   © 2026 Maison Soleil
 
   <!-- Sidebar ends -->
+</div>
+
 
   <!-- Main content starts -->
 
-  Booking · Confirmed
-  Bienvenue, Lucia.
+  <span class="booking-confirmation">Booking · Confirmed</span>
+  <h1 class="guest-greeting">Bienvenue, <em>Lucia</em>.</h1>
 
-  Print receipt
-  Add to calendar
+  <div class="comfirmation-btns-container"> 
+  <button>Print receipt</button>
+  <button> Add to calendar</button> 
+  </div>
+
 
   <!-- Booking cards start -->
 
   <!-- Receipt card -->
-  Receipt
-  № MS-2026
-  0421-AH
+  <div class="receipt">
+    <div>
+      <span>Receipt</span>
+      <div>
+        <span>№ MS-2026</span>
+        <span>0421-AH</span>
+      </div>
+  </div>  
+ 
 
-  Your stay
+ <h2>Your stay</h2> 
+<hr/>
 
-  Check in
-  25 Apr
-  Saturday · 15:00
+<div class="stay-info-checking">
+    <div class="check-in-details">
+      Check in
+      25 Apr
+      Saturday · 15:00
+    </div>
 
-  Check out
-  29 Apr
-  Wednesday · 11:00
+    <div class="check-out-details">
+      Check out
+      29 Apr
+      Wednesday · 11:00
+    </div>
+</div>
 
-  Room · La Garrigue · 4 nights
-  € 620.00
-  Breakfast · 2 guests
-  € 96.00
-  Tourist tax
-  € 14.40
+ <div>
+  
+  <div>Room · La Garrigue · 4 nights</div>
+  <em>€ 620.00</em>
+  <div>Breakfast· 2 guests</div> 
+  <em> € 96.00</em>
+  <div>Tourist tax</div>
+ <em> € 14.40</em>
+ </div>
 
-  Total paid
-  € 730.40
+ 
+  <span>Total paid</span>
+  <h3>€ 730.40</h3>
 
-  Paid · Wise · GBP
+ <span> Paid · Wise · GBP</span>
+  </div>
+ 
   <!-- Barcode image -->
 
   <!-- Note from host card -->
-  Welcome
+
+ <div class="welcome-card">
+   Welcome
   A note from your host, Margaux.
   We're so glad you're coming. The shutters will be open, the lemonade cold, and the cat - Poivre - pretending not to notice you.
   Room
-  La Garrigue
+  La Garrigue</div> 
+ 
 
   <!-- Booking cards end -->
 
   <!-- Guest info row starts -->
-
-  <!-- Arrival -->
+<div class="guest-info-cards">
+ <!-- Arrival -->
   Arrival
   01
   Check-in from 15:00
   Sat, 25 April
   Ring the brass bell by the blue door. If we're at the market, the key is in the terracotta pot by the olive tree.
 
-  <!-- Wifi -->
+</div>
+ 
+<div class="guest-info-cards">  <!-- Wifi -->
   Wifi
   02
   Le Soleil · Guest
@@ -105,14 +136,18 @@
   Password
   soleil-2026
   Copy
+</div>
 
-  <!-- Breakfast -->
+<div class="guest-info-card">
+   <!-- Breakfast -->
   Breakfast
   03
   Served 8 - 10:30
   On the terrace
   Fresh figs, Marseille honey, pain au levain, and espresso. Gluten-free option? Leave a note the night before.
 
+</div>
+ 
   <!-- Guest info row ends -->
 
   <!-- Main content ends -->
