@@ -15,6 +15,7 @@
     .attribution { font-size: 0.6875rem; text-align: center; }
     .attribution a { color: hsl(228, 45%, 44%); }
   </style>
+  <script src="./scripts/script.js"></script>
 </head>
 <body class="bg-neutral-200">
 
@@ -33,16 +34,66 @@
   </div>
  
  <!-- Sidebar starts -->
-  <div class="dropdown ">
+  <div class="dropdown relative  ">
   <!-- Guest navigation -->
-  <img class="dropdown-menu-icon mx-4" src='./assets/images/icon-menu.svg' alt="dropdown-menu-icon"/>
+  <img 
+  id="dropdown-menu-icon"
+  class="dropdown-menu-icon show mx-4" 
+  src='./assets/images/icon-menu.svg' 
+  alt="open-dropdown-menu"
+  onclick="openMenu()"
+  />
+
   
-  <div class="dropdown-content  bg-slate-50 rounded-md ">
-  <div class="">Your stay 1</div>
-  <div class="">The house</div>
-  <div class="">Around town</div>
-  <div class="">Breakfast</div>
-  <div class="">Messages</div>
+
+  
+  <div class="dropdown-content absolute hide top-5 p-3 right-1 w-[175px] h-[200px] bg-slate-200 rounded-lg shadow-md ">
+    
+    <img 
+    id="dropdown-menu-icon"
+    class="float-right text-red-400  ml-4 mb-[5px]" 
+    src='./assets/images/icon-close.svg' 
+    alt="close-menu"
+    onclick="closeMenu()"
+    />
+
+  
+    <div class="my-1 cursor-pointer">
+    <div  class="inline-flex justify-between items-center w-full">
+      <div class="inline-flex">
+        <img alt="comfy-bed" src="./assets//images/icon-bed.svg"/>
+        <a class="active:text-lg font-semibold">Your stay</a> 
+      </div>
+
+      <span class="rounded-[50%] px-[5px] text-white bg-red-500">1</span>
+    </div>
+  </div>
+  <div class="my-[2px] cursor-pointer">
+    <div class="inline-flex">
+        <img alt="cozy-home" src="./assets/images/icon-house.svg"/>
+        <a class="text-md">The house</a> 
+      </div>
+  </div>
+  <div class="my-[2px] cursor-pointer">
+      <div class="inline-flex">
+        <img alt="location" src="./assets/images/icon-pin.svg"/>
+        <a class="text-md">Around town</a> 
+      </div>
+    
+  </div>
+  <div class="my-[2px] cursor-pointer">
+     <div class="inline-flex">
+        <img alt="delicious breakfast" src="./assets/images/icon-breakfast-outline.svg"/>
+        <a class="text-md">Breakfast</a> 
+      </div>
+  </div>
+  <div class="my-[2px] cursor-pointer">
+     <div class="inline-flex">
+        <img alt="your messages" src="./assets/images/icon-mail.svg"/>
+        <a class="text-md">Messages</a> 
+      </div>
+   
+  </div>
  
 
   </div>
@@ -65,7 +116,7 @@
 
   <!-- Local weather -->
   Today in Cassis
-  27°
+  27°my-2
   Sunny · light breeze
 
   Est. 1987
@@ -93,7 +144,7 @@
   <button class="bg-slate-900 text-zinc-50 mx-[10px] cursor-pointer my-2 rounded-md"> Add to calendar</button> 
   </div>
 
- <div class="welcome-card h-100 flex rotate-5 shadow-xl flex-col justify-center items-start text-white p-2 ml-auto mr-auto my-2 rounded-lg w-[75%]">
+ <div class="welcome-card  h-100 flex rotate-5 shadow-xl flex-col justify-center items-start text-white p-2 ml-auto mr-auto my-15 rounded-lg w-[75%]">
    <span>Welcome card</span>
    <br/>
   <p>
