@@ -21,3 +21,31 @@
     background-color: rgb(194, 89, 46);
 }
 
+
+@media screen and (min-width:768px) {
+  
+
+  
+
+  .site-page{
+
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap:20px;
+    grid-template-areas: 
+    'sidebar main '
+    'sidebar main '
+    'sidebar main ';
+  }
+
+  .desktop-sidebar{
+    grid-area: 'sidebar';
+  }
+
+  .main-content{
+    grid-area:main
+  }
+
+ 
+
+}

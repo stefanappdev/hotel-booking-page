@@ -19,11 +19,17 @@
 </head>
 <body class="bg-neutral-200">
 
-<div class="flex flex-col items-center justify-center">
+<div id="site-page" class="
+flex flex-col items-center justify-center 
+">
 
 
 
-<div class="mobile-menu flex justify-around  items-center bg-yellow-50 w-[100%] border-none shadow-md">
+<div id="mobile-menu"
+class="
+flex justify-around  items-center bg-yellow-50 w-[100%] border-none shadow-md
+md:hidden
+">
  
   <div class="hotel-logo flex">
      <img class="h-[50px] mr-[10px]" src="./assets/images/illustration-sun.svg"/>
@@ -34,24 +40,30 @@
   </div>
  
  <!-- Sidebar starts -->
-  <div class="dropdown relative  ">
+  <div class="
+  dropdown relative  
+  
+  ">
   <!-- Guest navigation -->
   <img 
   id="dropdown-menu-icon"
-  class="dropdown-menu-icon show mx-4" 
+  class="
+  dropdown-menu-icon show mx-4
+  
+  " 
   src='./assets/images/icon-menu.svg' 
   alt="open-dropdown-menu"
   onclick="openMenu()"
   />
 
+  <div id='dropdown-content' class="
+   absolute hide top-5 p-3 right-1 w-[200px] h-[200px] bg-slate-200 rounded-lg shadow-md 
   
-
-  
-  <div class="dropdown-content absolute hide top-5 p-3 right-1 w-[175px] h-[200px] bg-slate-200 rounded-lg shadow-md ">
+  ">
     
     <img 
     id="dropdown-menu-icon"
-    class="float-right text-red-400  ml-4 mb-[5px]" 
+    class="float-right text-red-400  ml-4 mb-[10px]" 
     src='./assets/images/icon-close.svg' 
     alt="close-menu"
     onclick="closeMenu()"
@@ -94,271 +106,279 @@
       </div>
    
   </div>
- 
+  
+</div>
 
-  </div>
-  <!-- Sidebar ends -->
-  </div>
+</div>
+
+</div>
 
 
-  <div class="desktop-sidebar  hidden">
+  <aside id='desktop-sidebar' 
+  class="hidden 
+  md:block bg-red-900
+  ">
   <!-- Sidebar starts -->
 
-  Maison Soleil
+  <div>Maison Soleil</div>
 
   <!-- Guest navigation -->
+  <div>
+
   Your stay
   1
   The house
   Around town
   Breakfast
   Messages
+  </div>
 
   <!-- Local weather -->
-  Today in Cassis
+  <div>
+    Today in Cassis
   27°my-2
   Sunny · light breeze
+  </div> 
+  
 
-  Est. 1987
+  <div>Est. 1987
   Maison Soleil · 12 Rue des Oliviers · Cassis
   © 2026 Maison Soleil
-
+</div>
   <!-- Sidebar ends -->
-</div>
+
+</aside>
 
 
-
-</div>
-
-<main class="main-content ">
+<main class="main-content md:flex flex-col  ">
   <!-- Main content starts -->
 
   
-  <div class="my-4">
-    <span class="text-zinc-600 ">Booking · Confirmed</span>
-    <h1 class="guest-greeting text-center text-3xl font-extrabold">Bienvenue,<em class="text-red-900">Lucia</em>.</h1>
-  </div>
+      <div class="my-4 welcome-section ">
+        <span class="text-zinc-600 ">Booking · Confirmed</span>
+        <h1 class="guest-greeting text-center text-3xl font-extrabold">Bienvenue,<em class="text-red-900">Lucia</em>.</h1>
+      </div>
 
-  <div class="confirmation-btns-container items-center my-4 justify-center flex"> 
-  <button class="bg-gray-300 text-slate-900 mx-[10px] cursor-pointer my-2 rounded-md">Print receipt</button>
-  <button class="bg-slate-900 text-zinc-50 mx-[10px] cursor-pointer my-2 rounded-md"> Add to calendar</button> 
-  </div>
+      <div class="confirmation-btns-container items-center my-4 justify-center flex"> 
+      <button class="bg-gray-300 text-slate-900 mx-[10px] cursor-pointer my-2 rounded-md">Print receipt</button>
+      <button class="bg-slate-900 text-zinc-50 mx-[10px] cursor-pointer my-2 rounded-md"> Add to calendar</button> 
+      </div>
 
- <div class="welcome-card  h-100 flex rotate-5 shadow-xl flex-col justify-center items-start text-white p-2 ml-auto mr-auto my-15 rounded-lg w-[75%]">
-   <span>Welcome card</span>
-   <br/>
-  <p>
-   <h2 class="text-2xl text-yellow-300 text-center"><em>A note from your host,</em></h2>
-   <br/>
-  <h1 class="text-4xl text-center"> <em>Margaux.</em></h1>
-  <br/>
-  We're so glad you're coming. The shutters will be open, the lemonade cold, and the cat - Poivre - pretending not to notice you.
-  </p>
-
- <div class="mt-3 flex flex-col">
-    <span>Room</span>
-  <strong class="text-xl" >La Garrigue</strong>
- </div>
-  
-</div> 
- 
-
-  <!-- Booking cards start -->
-
-  <!-- Receipt card -->
-  <div class="receipt h-100 ml-auto my-[20px] mr-auto -rotate-3.5 bg-slate-100 p-2 border-none shadow-md rounded-lg w-[75%]">
-  
-  <div class="receipt-header mb-2 ">
-    <div class="receipt-no-container justify-between inline-flex w-full">
-       <span class="text-slate-600">Receipt</span>
-      <span class="text-slate-600">№ MS-2026</span>
-    </div>
-     
-     <div class="stay-info justify-between inline-flex w-full">
-      <h2 class="text-lg font-semibold">Your stay</h2>  
-      <span class="text-slate-600">0421-AH</span>
-     </div>  
-     
-  </div>  
- <hr class="bg-gray-100 w-[95%] mx-auto">
-
-<div class="stay-info-checking flex justify-between my-4 px-10 items-center w-full">
-    <div class="check-in-details">
-      <h3 class="text-slate-600">Check in</h3>
-      <strong class="text-xl font-semibold">25 Apr</strong>
+    <div class="welcome-card  h-100 flex rotate-5 shadow-xl flex-col justify-center items-start text-white p-2 ml-auto mr-auto my-15 rounded-lg w-[75%]">
+      <span>Welcome card</span>
       <br/>
-      <span class="text-slate-600">Sat·15:00</span>
-    </div>
-
-    <div class="check-out-details">
-      <h3 class="text-slate-600">Check out</h3>
-      <strong class="text-xl font-semibold">29 Apr</strong>
+      <p>
+      <h2 class="text-2xl text-yellow-300 text-center"><em>A note from your host,</em></h2>
       <br/>
-      <span class="text-slate-600">Wed·11:00 </span>
+      <h1 class="text-4xl text-center"> <em>Margaux.</em></h1>
+      <br/>
+      We're so glad you're coming. The shutters will be open, the lemonade cold, and the cat - Poivre - pretending not to notice you.
+      </p>
+
+    <div class="mt-3 flex flex-col">
+        <span>Room</span>
+      <strong class="text-xl" >La Garrigue</strong>
     </div>
-</div>
- <hr class="bg-gray-100 w-[95%] mx-auto">
-
- <div class="service-fees flex flex-col">
-  
-  <div class="room-service-fee inline-flex justify-between">
-    <span>Room · La Garrigue x 4 nights</span>
-  <em>€ 620.00</em>
-  </div>
-
-  <div class="breakfast-service-fee inline-flex justify-between">
-   <span>Breakfast· 2 guests</span> 
-   <em> € 96.00</em>
-  </div> 
-  
-  <div class="tourist-tax inline-flex justify-between">
-    <span>Tourist tax</span>
-    <em> € 14.40</em>
-  </div>
-
-
-
- <hr class="bg-gray-100 w-[95%] mx-auto">
-
-  <div class="total-fee inline-flex justify-between">
-
-    <span>Total paid</span>
-    <em class="text-xl font-semibold">€ 730.40</em>
-    
-  </div>
-
-
-  <div class="my-5 inline-flex justify-between">
-   <span class="text-md font-bold">Paid · Wise · GBP</span>
-   <img alt='receipt-barcode' src="./assets/images/icon-barcode.svg"/>
-  </div>
-</div>  
-</div>
-
- 
-
-</div>
- 
-  <!-- Barcode image -->
-
-  <!-- Note from host card -->
-
-
-  <!-- Booking cards end -->
-
-  <!-- Guest info row starts -->
-<div class="guest-info-cards guest-arrival-card ml-auto my-5 mr-auto bg-slate-100 p-2 border-none shadow-md rounded-md ">
- <!-- Arrival -->
-  <div class="flex items-center justify-between w-full ">
-  
-      <div class='mr-5 card-img-container flex items-center'>
-        <div>
-        <img class="h-[50px] w-[50px] mr-2 bg-red-800" src="./assets/images/icon-key.svg" alt="guest arrival card details"/>
-      </div>  
       
-      <div class=" text-red-800 card-label-container">
-        <span>ARRIVAL</span> 
-      </div> 
+    </div> 
     
-  </div>
-   
-   <span class='text-red-800 justify-self-end ml-50'>01</span>
-  </div>
-   
-  <h2 class="check-in-time font-bold text-2xl">Check-in from 15:00</h2>
-  <span class="check-in-date text-slate-600 ">Sat, 25 April</span>
-  <br/>
-  
-  <p>Ring the brass bell by the blue door. If we're at the market, the key is in the terracotta pot by the olive tree.</p>
 
-</div>
- 
-<div class="guest-info-cards guest-wifi-card ml-auto  my-5 mr-auto bg-slate-100 p-2 border-none shadow-md rounded-md">  <!-- Wifi -->
-  
-  
-  
-  
-   <div class="flex items-center justify-between w-full ">
-  
-      <div class='mr-5 card-img-container flex items-center'>
-        <div>
-        <img class="h-[50px] w-[50px] mr-2 bg-blue-500" src="./assets/images/icon-wifi.svg" alt="guest wifi card details"/>
-      </div>  
+      <!-- Booking cards start -->
+
+      <!-- Receipt card -->
+      <div class="receipt h-100 ml-auto my-[20px] mr-auto -rotate-3.5 bg-slate-100 p-2 border-none shadow-md rounded-lg w-[75%]">
       
-      <div class=" text-blue-500 card-label-container">
-        <span>WIFI</span> 
-      </div> 
-    
-  </div>
-   
-   <span class='text-blue-500 ustify-self-end ml-50'>02</span>
-  
-  </div>
-
-  <h2 class="wifi-guest-label font-bold text-2xl">Le Soleil · Guest </h2>
-  <span class="text-slate-600 ">password below</span>
-  <br/>
-  
-
-  <div class="wifi-password-info my-2">
-
-    <div class="network bg-neutral-400 rounded-md my-2 px-2 w-[85%] justify-between inline-flex">
-      <span class="mr-20 text-gray-100">NETWORK</span>
-      <strong class="">Le Soliel · Guest </strong>
-    </div>
-
-    <div class="password bg-neutral-400 rounded-md my-2 px-2 w-[85%] justify-between inline-flex">
-         <span class=" text-gray-200 mr-20">PASSWORD</span>
-        <div class="">
-            <strong>soleil-2026 </strong>
-           
+      <div class="receipt-header mb-2 ">
+        <div class="receipt-no-container justify-between inline-flex w-full">
+          <span class="text-slate-600">Receipt</span>
+          <span class="text-slate-600">№ MS-2026</span>
         </div>
+        
+        <div class="stay-info justify-between inline-flex w-full">
+          <h2 class="text-lg font-semibold">Your stay</h2>  
+          <span class="text-slate-600">0421-AH</span>
+        </div>  
+        
+      </div>  
+    <hr class="bg-gray-100 w-[95%] mx-auto">
+
+    <div class="stay-info-checking flex justify-between my-4 px-10 items-center w-full">
+        <div class="check-in-details">
+          <h3 class="text-slate-600">Check in</h3>
+          <strong class="text-xl font-semibold">25 Apr</strong>
+          <br/>
+          <span class="text-slate-600">Sat·15:00</span>
+        </div>
+
+        <div class="check-out-details">
+          <h3 class="text-slate-600">Check out</h3>
+          <strong class="text-xl font-semibold">29 Apr</strong>
+          <br/>
+          <span class="text-slate-600">Wed·11:00 </span>
+        </div>
+    </div>
+    <hr class="bg-gray-100 w-[95%] mx-auto">
+
+    <div class="service-fees flex flex-col">
       
+      <div class="room-service-fee inline-flex justify-between">
+        <span>Room · La Garrigue x 4 nights</span>
+      <em>€ 620.00</em>
+      </div>
+
+      <div class="breakfast-service-fee inline-flex justify-between">
+      <span>Breakfast· 2 guests</span> 
+      <em> € 96.00</em>
+      </div> 
+      
+      <div class="tourist-tax inline-flex justify-between">
+        <span>Tourist tax</span>
+        <em> € 14.40</em>
+      </div>
+
+
+
+    <hr class="bg-gray-100 w-[95%] mx-auto">
+
+      <div class="total-fee inline-flex justify-between">
+
+        <span>Total paid</span>
+        <em class="text-xl font-semibold">€ 730.40</em>
+        
+      </div>
+
+
+      <div class="my-5 inline-flex justify-between">
+      <span class="text-md font-bold">Paid · Wise · GBP</span>
+      <img alt='receipt-barcode' src="./assets/images/icon-barcode.svg"/>
+      </div>
+    </div>  
     </div>
     
-  </div>
-  
-   <span class="font-semibold cursor-pointer"> Copy</span>
 
- 
-</div>
+  <div id="guest-info-cards" 
+    class="flex flex-col items-center justify-center">
 
-<div class="guest-info-card guest-breakfast-card ml-auto h-50 my-5  mr-auto bg-slate-100 p-2 border-none shadow-md rounded-md">
-   <!-- Breakfast -->
-   <div class="flex items-center justify-between w-full ">
+    
+    <div id="guest-arrival-card "
+        class="ml-auto h-60 my-5  
+              mr-auto bg-slate-100 p-2 border-none shadow-md rounded-md w-[85%] ">
+        
+        <div class='card-header mr-5 inline-flex justify-between items-center w-full'>
+          
+            <div class="inline-flex items-center">
+               <img class=" header-img h-[50px] w-[50px] mr-2 bg-red-800" 
+                src="./assets/images/icon-key.svg" 
+                alt="guest arrival card details"/>
+                <h3 class="card-heading text-lg text-red-500">ARRIVAL</h3>
+            </div>
+             
+
+            <span class='guest-card-number text-red-500 '>01</span>
+       </div>  
+
+
+
+       <div class="card-content">
+             <h2 class="check-in-time font-bold text-2xl">Check-in from 15:00</h2>
+            <span class="check-in-date text-slate-600 ">Sat, 25 April</span>
+            <p class="text-sm">Ring the brass bell by the blue door. 
+            If we're at the market, the key is in the terracotta pot by the olive tree.</p>
   
-      <div class='mr-5 card-img-container flex items-center'>
-        <div>
-        <img class="h-[50px] w-[50px] mr-2 bg-rose-800" src="./assets/images/icon-breakfast.svg" alt="guest arrival card details"/>
-      </div>  
-      
-      <div class=" text-rose-800 card-label-container">
-        <span>BREAKFAST</span> 
-      </div> 
+       </div>
+        
+          
+
+    </div>
+
+
+      <div id="guest-wifi-card "
+        class="ml-auto h-60 my-5  
+              mr-auto bg-slate-100 p-2 border-none shadow-md rounded-md w-[85%] ">
+
+          <div class='card-header mr-5 inline-flex justify-between items-center w-full'>
+          
+            <div class="inline-flex items-center">
+               <img class=" header-img h-[50px] w-[50px] mr-2 bg-blue-500" 
+                src="./assets/images/icon-wifi.svg" 
+                alt="guest wifi card details"/>
+                <h3 class="card-heading text-lg text-blue-500">WIFI</h3>
+            </div>
+             
+
+            <span class='guest-card-number text-blue-500 '>02</span>
+       </div>  
+
+
+
+       <div class="card-content">
+
+             <h2 class="wifi-guest-label font-bold text-2xl">Le Soleil · Guest </h2>
+            <span class="text-slate-600 ">password below</span>
+
+            <div class="wifi-info">
+
+                  <div class="network-info bg-neutral-400 rounded-md my-2 
+                  px-2 w-[95%] justify-between inline-flex">
+                  <span class="text-gray-100 text-sm">NETWORK</span>
+                  <span class="text-xs font-semibold">Le Soliel · Guest </span>
+                </div>
+
+                  <div class="network-info bg-neutral-400 rounded-md my-2 
+                  px-2 w-[95%] justify-between inline-flex">
+                  <span class="text-gray-100 text-sm">PASSWORD</span>
+                  <span class="text-xs font-semibold">Soliel-2026 </span>
+                 
+                </div>
+                <strong class="'cursor-pointer">copy</strong>
+            </div>
+  
+       </div>
+        
+        
+      </div>
+
+        <div id="guest-breakfast-card "
+        class="ml-auto h-60 my-5  
+              mr-auto bg-slate-100 p-2 border-none shadow-md rounded-md w-[85%] ">
+
+          <div class='card-header mr-5 inline-flex justify-between items-center w-full'>
+          
+            <div class="inline-flex items-center">
+               <img class=" header-img h-[50px] w-[50px] mr-2 bg-rose-500" 
+                src="./assets/images/icon-breakfast.svg" 
+                alt="guest wifi card details"/>
+                <h3 class="card-heading text-lg text-rose-500">BREAKFAST</h3>
+            </div>
+             
+
+            <span class='guest-card-number text-rose-500 '>03</span>
+       </div>  
+
+        <div class="card-content">
+
+             <h2 class="breakfast-time font-bold text-2xl my-2">Served 8 - 10:30</h2>
+            <span class="breakfast-location text-slate-600 my-2 ">on the Terrace</span>
+          
+            <div class="my-2">
+               <p class="text-sm"> 
+                Fresh figs, Marseille honey, pain au levain, and espresso. 
+              Gluten-free option? Leave a note the night before.
+              </p>
+            </div>
+           
+
+          </div>
+      </div>
     
   </div>
-   
-   <span class='text-rose-800 justify-self-end ml-50'>03</span>
-  </div>
-   
-  <h2 class="breakfast-time font-bold text-2xl my-2">Served 8 - 10:30</h2>
-  <span class="breakfast-location text-slate-600 my-2 ">on the Terrace</span>
-  <br/>
-  
-  <p> Fresh figs, Marseille honey, pain au levain, and espresso. 
-    Gluten-free option? Leave a note the night before.
-  </p>
-
-</div>
- 
-  <!-- Guest info row ends -->
-
-  <!-- Main content ends -->
 </main>
-  <footer class="attribution">
+</div>
+
+
+ <footer class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>.
     Coded by <a href="#">Stefan Mitchell</a>.
   </footer>
-  </div>
 </body>
 </html>
