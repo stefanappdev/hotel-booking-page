@@ -17,7 +17,7 @@
   display:block
 }
 
-.welcome-card{
+#welcome-card{
     background-color: rgb(194, 89, 46);
 }
 
@@ -27,22 +27,22 @@
 
   
 
-  .site-page{
+  #site-page{
 
     display: grid;
-    grid-template-columns: repeat(2,1fr);
-    gap:20px;
+    grid-template-columns: repeat(2,25%,75%);
+    gap:5px;
     grid-template-areas: 
-    'sidebar main '
-    'sidebar main '
-    'sidebar main ';
+    'sidebar main main '
+    'sidebar main main '
+    'sidebar main main ';
   }
 
-  .desktop-sidebar{
-    grid-area: 'sidebar';
+  #desktop-sidebar{
+    grid-area:sidebar;
   }
 
-  .main-content{
+  #main-content{
     grid-area:main
   }
 
